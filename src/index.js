@@ -8,6 +8,10 @@ const port = 3000
 
 app.use(express.static(path.join(__dirname, 'public')))
 
+// body-parser
+app.use(express.urlencoded({extended: true})) // <form />
+app.use(express.json()) // XMLHttpRequest, fetch, axios, ajax...
+
 // HTTP logger
 app.use(morgan('combined'))
 
@@ -30,7 +34,8 @@ app.get('/search', (req, res) => {
 })
 
 app.post('/search', (req, res) => {
-  res.render('search')
+  console.log(req.body)
+  res.send('')
 })
 
 app.listen(port, () => {
