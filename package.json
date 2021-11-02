@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 2"
+    "src/**/*.{js, json, scss}": "prettier --single-quote --trailing-comma all --tab-width 2"
   },
   "husky": {
     "hooks": {
