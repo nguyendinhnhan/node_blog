@@ -7,6 +7,7 @@
     <thead>
       <tr>
         <th scope="col">#</th>
+        <th scope="col">Id {{{sortable '_id' _sort}}}</th>
         <th scope="col">Name {{{sortable 'name' _sort}}}</th>
         <th scope="col">Description {{{sortable 'description' _sort}}}</th>
         <th scope="col">Created At {{{sortable 'createdAt' _sort}}}</th>
@@ -17,6 +18,7 @@
       {{#each courses}}
       <tr>
         <th scope="row">{{sum @index 1}}</th>
+        <td>{{this._id}}</td>
         <td>{{this.name}}</td>
         <td>{{this.description}}</td>
         <td>{{this.createdAt}}</td>
